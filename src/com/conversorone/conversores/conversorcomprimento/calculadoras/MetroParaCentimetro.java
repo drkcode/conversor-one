@@ -1,12 +1,8 @@
 package com.conversorone.conversores.conversorcomprimento.calculadoras;
 
-import com.conversorone.Calculadora;
+import com.conversorone.AbstractCalculadora;
 
-public class MetroParaCentimetro extends Calculadora {
-
-    public MetroParaCentimetro() {
-        inicializar();
-    }
+public class MetroParaCentimetro extends AbstractCalculadora {
 
     @Override
     public void inicializar() {
@@ -16,7 +12,7 @@ public class MetroParaCentimetro extends Calculadora {
     @Override
     public String calcular(double input) {
         var resultado = input * 100;
-        return  formatar(resultado, "centimetros");
+        return  formatar(String.valueOf((int) resultado), "centimetros");
     }
 
 }

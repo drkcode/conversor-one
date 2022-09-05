@@ -1,7 +1,7 @@
 package com.conversorone.conversores.conversormoedas;
 
-import com.conversorone.Calculadora;
-import com.conversorone.Conversor;
+import com.conversorone.AbstractCalculadora;
+import com.conversorone.JanelaConversor;
 import com.conversorone.conversores.conversormoedas.calculadoras.DolarParaReal;
 import com.conversorone.conversores.conversormoedas.calculadoras.RealParaDolar;
 
@@ -11,13 +11,13 @@ import java.util.List;
 
 public class Moedas {
 
-    public static List<Calculadora> calculadoras = new ArrayList<>(
+    public static List<AbstractCalculadora> abstractCalculadoras = new ArrayList<>(
             Arrays.asList(
                     new RealParaDolar(),
                     new DolarParaReal()
             )
     );
 
-    public static Conversor conversor = new Conversor("Conversor de Moeda", calculadoras);
+    public static JanelaConversor janelaConversor = new JanelaConversor("Conversor de Moeda", abstractCalculadoras);
 
 }

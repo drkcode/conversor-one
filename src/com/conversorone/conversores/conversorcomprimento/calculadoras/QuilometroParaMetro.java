@@ -1,12 +1,9 @@
 package com.conversorone.conversores.conversorcomprimento.calculadoras;
 
-import com.conversorone.Calculadora;
+import com.conversorone.AbstractCalculadora;
 
-public class QuilometroParaMetro extends Calculadora {
+public class QuilometroParaMetro extends AbstractCalculadora {
 
-    public QuilometroParaMetro() {
-        inicializar();
-    }
 
     @Override
     public void inicializar() {
@@ -16,7 +13,7 @@ public class QuilometroParaMetro extends Calculadora {
     @Override
     public String calcular(double input) {
         var resultado = input * 1000;
-        return formatar(resultado, "metros");
+        return formatar(String.valueOf(resultado), "metros");
     }
 
 }

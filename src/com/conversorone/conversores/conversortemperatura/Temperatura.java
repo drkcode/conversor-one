@@ -1,7 +1,7 @@
 package com.conversorone.conversores.conversortemperatura;
 
-import com.conversorone.Calculadora;
-import com.conversorone.Conversor;
+import com.conversorone.AbstractCalculadora;
+import com.conversorone.JanelaConversor;
 import com.conversorone.conversores.conversortemperatura.calculadoras.CelsiusParaFahrenheit;
 import com.conversorone.conversores.conversortemperatura.calculadoras.FahrenheitParaCelsius;
 
@@ -11,13 +11,13 @@ import java.util.List;
 
 public class Temperatura {
 
-    public static List<Calculadora> calculdoras = new ArrayList<>(
+    public static List<AbstractCalculadora> calculdoras = new ArrayList<>(
             Arrays.asList(
                     new CelsiusParaFahrenheit(),
                     new FahrenheitParaCelsius()
             )
     );
 
-    public static Conversor conversor = new Conversor("Conversor de Temperatura", calculdoras);
+    public static JanelaConversor janelaConversor = new JanelaConversor("Conversor de Temperatura", calculdoras);
 
 }

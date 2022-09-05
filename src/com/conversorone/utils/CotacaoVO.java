@@ -1,10 +1,10 @@
 package com.conversorone.utils;
 
-public class CotacaoDTO {
+public class CotacaoVO {
     private String name;
     private double bid;
 
-    public CotacaoDTO() {}
+    public CotacaoVO() {}
 
     public String getName() {
         return name;

@@ -17,7 +17,7 @@ public class Cotacao {
         this.uri = "https://economia.awesomeapi.com.br/json/last/"+ de +"-"+ para;
     }
 
-    public CotacaoDTO get() throws Exception {
+    public CotacaoVO get() throws Exception {
 
         URI uri = new URI(this.uri);
         HttpRequest request = HttpRequest.newBuilder()
@@ -35,11 +35,11 @@ public class Cotacao {
         List<String> props = new ArrayList<>();
         while (matcher.find()) props.add(matcher.group());
 
-        CotacaoDTO responseDTO = new CotacaoDTO();
+        CotacaoVO responseDTO = new CotacaoVO();
         props.forEach(p -> {
             var keyValue = p.split(":");
             if(keyValue[0].contains("name")) {
-                responseDTO.setName(keyValue[1]);
+                responseDTO.setName(keyValue[1].replace("\"", ""));
             } else {
                 Double bid = Double.parseDouble(keyValue[1].replace("\"", ""));
                 responseDTO.setBid(bid);

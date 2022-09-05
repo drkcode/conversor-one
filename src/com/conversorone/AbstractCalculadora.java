@@ -3,11 +3,13 @@ package com.conversorone;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public abstract class Calculadora {
+public abstract class AbstractCalculadora {
 
     protected String nomeDaCalculadora;
 
-    protected Calculadora(){}
+    public AbstractCalculadora(){
+        inicializar();
+    }
     public abstract Object calcular(double input);
 
     public abstract void inicializar();
@@ -26,8 +28,8 @@ public abstract class Calculadora {
         return currencyFormatter.format(valor);
     }
 
-    public String formatar(double resultado, String nomeDaUnidade){
-        return System.out.format("%f %s", resultado, nomeDaUnidade).toString();
+    public String formatar(String resultado, String nomeDaUnidade){
+        return String.format("%s %s", resultado, nomeDaUnidade);
     }
 
 }

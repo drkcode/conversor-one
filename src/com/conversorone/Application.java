@@ -4,18 +4,19 @@ import com.conversorone.conversores.conversorcomprimento.Comprimento;
 import com.conversorone.conversores.conversormassa.Massa;
 import com.conversorone.conversores.conversormoedas.Moedas;
 import com.conversorone.conversores.conversortemperatura.Temperatura;
+import com.conversorone.conversores.conversortempo.Tempo;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class Application {
 
-
-    public static Conversor[] listaDeConversores = {
-            Moedas.conversor,
-            Comprimento.conversor,
-            Temperatura.conversor,
-            Massa.conversor
+    public static JanelaConversor[] listaDeConversores = {
+            Moedas.janelaConversor,
+            Comprimento.janelaConversor,
+            Temperatura.janelaConversor,
+            Massa.janelaConversor,
+            Tempo.janelaConversor
     };
 
     public static void main(String[] args) {

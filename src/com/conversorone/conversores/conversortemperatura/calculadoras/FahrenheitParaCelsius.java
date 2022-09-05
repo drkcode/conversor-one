@@ -1,26 +1,20 @@
 package com.conversorone.conversores.conversortemperatura.calculadoras;
 
-import com.conversorone.Calculadora;
-import com.conversorone.utils.CotacaoDTO;
+import com.conversorone.AbstractCalculadora;
+import com.conversorone.utils.CotacaoVO;
 
 
-public class FahrenheitParaCelsius extends Calculadora {
-
-    CotacaoDTO cotacaoDTO;
-
-    public FahrenheitParaCelsius() {
-        inicializar();
-    }
+public class FahrenheitParaCelsius extends AbstractCalculadora {
+    CotacaoVO cotacaoVO;
 
     public void inicializar ()  {
         nomeDaCalculadora = "Fahrenheit para Celsius";
-
     }
 
     @Override
     public String calcular(double input) {
         var resultado = (input - 32) * (5/9);
-        return formatar(resultado, "ºC");
+        return formatar(String.valueOf(resultado), "graus ºC");
     }
 
 }

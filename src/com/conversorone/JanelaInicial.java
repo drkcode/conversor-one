@@ -8,11 +8,11 @@ import java.util.NoSuchElementException;
 
 public class JanelaInicial {
 
-    private final Conversor[] listaDeConversores;
+    private final JanelaConversor[] listaDeConversores;
 
     private String opcaoSelecionada;
 
-    public JanelaInicial(Conversor[] listaDeConversores) {
+    public JanelaInicial(JanelaConversor[] listaDeConversores) {
         this.listaDeConversores = listaDeConversores;
     }
 
@@ -22,7 +22,7 @@ public class JanelaInicial {
         label.setBorder(new EmptyBorder(10, 20,20, 20));
 
         String[] opcoes = Arrays.stream(listaDeConversores)
-                .map(Conversor::getSubTitulo).toArray(String[]::new);
+                .map(JanelaConversor::getSubTitulo).toArray(String[]::new);
 
         var valorDoInput = JOptionPane.showInputDialog(
                 null,
@@ -34,17 +34,16 @@ public class JanelaInicial {
                 opcoes[0]);
 
         if(valorDoInput == null) return;
-
         opcaoSelecionada = (String) valorDoInput;
         inicializarConversor();
     }
 
     private void inicializarConversor() {
         try {
-            Conversor conversor = Arrays.stream(listaDeConversores)
+            JanelaConversor janelaConversor = Arrays.stream(listaDeConversores)
                     .filter(c -> c.getSubTitulo().equals(opcaoSelecionada)).findFirst().orElseThrow();
 
-            conversor.inicializar();
+            janelaConversor.inicializar();
         } catch (NoSuchElementException e) {
             JOptionPane.showMessageDialog(null,
                     "Conversor não encontrado",

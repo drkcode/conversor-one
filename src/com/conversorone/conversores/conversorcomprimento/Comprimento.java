@@ -1,7 +1,7 @@
 package com.conversorone.conversores.conversorcomprimento;
 
-import com.conversorone.Calculadora;
-import com.conversorone.Conversor;
+import com.conversorone.AbstractCalculadora;
+import com.conversorone.JanelaConversor;
 import com.conversorone.conversores.conversorcomprimento.calculadoras.CentimetroParaMetro;
 import com.conversorone.conversores.conversorcomprimento.calculadoras.MetroParaCentimetro;
 import com.conversorone.conversores.conversorcomprimento.calculadoras.MetroParaQuilometro;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Comprimento {
 
-    public static List<Calculadora> calculadoras = new ArrayList<>(
+    public static List<AbstractCalculadora> abstractCalculadoras = new ArrayList<>(
             Arrays.asList(
                     new CentimetroParaMetro(),
                     new MetroParaCentimetro(),
@@ -22,6 +22,6 @@ public class Comprimento {
             )
     );
 
-    public static Conversor conversor = new Conversor("Conversor de Comprimento", calculadoras);
+    public static JanelaConversor janelaConversor = new JanelaConversor("Conversor de Comprimento", abstractCalculadoras);
 
 }

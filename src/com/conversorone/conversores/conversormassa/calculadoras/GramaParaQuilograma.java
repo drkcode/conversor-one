@@ -1,12 +1,8 @@
 package com.conversorone.conversores.conversormassa.calculadoras;
 
-import com.conversorone.Calculadora;
+import com.conversorone.AbstractCalculadora;
 
-public class GramaParaQuilograma extends Calculadora {
-
-    public GramaParaQuilograma() {
-        inicializar();
-    }
+public class GramaParaQuilograma extends AbstractCalculadora {
 
     @Override
     public void inicializar() {
@@ -16,6 +12,6 @@ public class GramaParaQuilograma extends Calculadora {
     @Override
     public String calcular(double input) {
         var resultado = input / 1000;
-        return formatar(resultado, "quilogramas");
+        return formatar(String.format("%.1f", resultado), "quilogramas");
     }
 }

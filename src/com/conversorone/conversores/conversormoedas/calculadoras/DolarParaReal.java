@@ -1,24 +1,19 @@
 package com.conversorone.conversores.conversormoedas.calculadoras;
 
-import com.conversorone.Calculadora;
+import com.conversorone.AbstractCalculadora;
 import com.conversorone.utils.Cotacao;
-import com.conversorone.utils.CotacaoDTO;
+import com.conversorone.utils.CotacaoVO;
 
 import javax.swing.*;
 
 
-public class DolarParaReal extends Calculadora {
-
-    CotacaoDTO cotacaoDTO;
-
-    public DolarParaReal() {
-        inicializar();
-    }
+public class DolarParaReal extends AbstractCalculadora {
+    CotacaoVO cotacaoVO;
 
     public void inicializar ()  {
         try {
-            cotacaoDTO = new Cotacao("USD", "BRL").get();
-            nomeDaCalculadora = cotacaoDTO.getName();
+            cotacaoVO = new Cotacao("USD", "BRL").get();
+            nomeDaCalculadora = cotacaoVO.getName();
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Algo deu errado.");
         }
@@ -27,7 +22,7 @@ public class DolarParaReal extends Calculadora {
 
     @Override
     public String calcular(double input) {
-        Double total = cotacaoDTO.getBid() * input;
-        return formatar(total, "BR");
+        Double total = cotacaoVO.getBid() * input;
+        return formatar(String.format("%.2f", total), "reais");
     }
 }
