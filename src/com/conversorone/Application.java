@@ -28,5 +28,4 @@ public class Application {
         var menuPrincipal = new JanelaInicial(listaDeConversores);
         menuPrincipal.inicializar();
     }
-
 }

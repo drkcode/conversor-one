@@ -31,5 +31,4 @@ public abstract class AbstractCalculadora {
     public String formatar(String resultado, String nomeDaUnidade){
         return String.format("%s %s", resultado, nomeDaUnidade);
     }
-
 }

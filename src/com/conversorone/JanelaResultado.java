@@ -30,5 +30,11 @@ public class JanelaResultado {
                 panel,
                 "Conversor ONE",
                 JOptionPane.PLAIN_MESSAGE);
+
+        var opcaoSelecionada = new JanelaConfirmar("Deseja realizar uma nova conversão?").getOpcaoSelecionada();
+
+        if(opcaoSelecionada != 0) return;
+
+        Application.start();
     }
 }
