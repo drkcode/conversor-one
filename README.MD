@@ -20,4 +20,4 @@ O conversor de moeda deverá:
 ### Extra: 
 Como desafio extra adicionei ao meu programa outro tipo de conversões como temperatura, massa, comprimento e tempo.
 
-![Badge do desafio](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1659457371Badge_JAVA_Alura_ChallengeOracleONE_2000x2000.png.png?utm_campaign=alura_latam_-_challenge_email_projeto_5_br&utm_medium=email&utm_source=RD+Station)
+![Badge do desafio](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1659457371Badge_JAVA_Alura_ChallengeOracleONE_2000x2000.png.png)
