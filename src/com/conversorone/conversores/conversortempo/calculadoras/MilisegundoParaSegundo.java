@@ -6,11 +6,11 @@ public class MilisegundoParaSegundo extends AbstractCalculadora {
 
     @Override
     public void inicializar() {
-        nomeDaCalculadora = "Milisegundo para segundo";
+        nome = "Milisegundo para segundo";
     }
 
     @Override
-    public Object calcular(double input) {
+    public String calcular(double input) {
         var resultado = input / 1000;
         return formatar(String.format("%.1f", resultado), "segundo(s)");
     }

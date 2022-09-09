@@ -7,7 +7,7 @@ public class QuilometroParaMetro extends AbstractCalculadora {
 
     @Override
     public void inicializar() {
-        nomeDaCalculadora = "Quilometro para Metro";
+        nome = "Quilometro para Metro";
     }
 
     @Override

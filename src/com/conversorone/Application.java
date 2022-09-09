@@ -20,12 +20,15 @@ public class Application {
     };
 
     public static void main(String[] args) {
+        setConfigOptionPane();
         start();
     }
 
     public static void start() {
+        new JanelaInicial(listaDeConversores).inicializar();
+    }
+
+    public static void setConfigOptionPane() {
         UIManager.put("OptionPane.border", new EmptyBorder(10, 30, 10, 30));
-        var menuPrincipal = new JanelaInicial(listaDeConversores);
-        menuPrincipal.inicializar();
     }
 }

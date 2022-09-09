@@ -4,19 +4,19 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class JanelaFormConversor {
+public class JanelaCalculadora {
 
     private final String subTitulo;
 
-    private AbstractCalculadora abstractCalculadora;
+    private AbstractCalculadora calculadora;
 
     private String valorDoInput;
 
     private String resultado;
 
-    public JanelaFormConversor(String subTitulo, AbstractCalculadora abstractCalculadora) {
+    public JanelaCalculadora(String subTitulo, AbstractCalculadora calculadora) {
         this.subTitulo = subTitulo;
-        this.abstractCalculadora = abstractCalculadora;
+        this.calculadora = calculadora;
     }
 
     public void inicializar() {
@@ -36,19 +36,20 @@ public class JanelaFormConversor {
                 "Conversor ONE",
                 JOptionPane.PLAIN_MESSAGE
         );
+
         if (valorDoInput == null) return;
+
         calcular();
     }
 
     public void calcular() {
         try {
-            resultado = abstractCalculadora.calcular(Double.parseDouble(valorDoInput)).toString();
+            resultado = String.valueOf(calculadora.calcular(Double.parseDouble(valorDoInput)));
             new JanelaResultado(resultado).inicializar();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Dados incorretos. Informe apenas numeros");
-            Application.start();
+            inicializar();
         }
-
     }
 
 }

@@ -1,14 +1,11 @@
 package com.conversorone.conversores.conversortemperatura.calculadoras;
 
 import com.conversorone.AbstractCalculadora;
-import com.conversorone.utils.CotacaoVO;
-
 
 public class FahrenheitParaCelsius extends AbstractCalculadora {
-    CotacaoVO cotacaoVO;
 
     public void inicializar ()  {
-        nomeDaCalculadora = "Fahrenheit para Celsius";
+        nome = "Fahrenheit para Celsius";
     }
 
     @Override

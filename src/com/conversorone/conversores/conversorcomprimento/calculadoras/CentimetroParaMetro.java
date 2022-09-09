@@ -5,7 +5,7 @@ import com.conversorone.AbstractCalculadora;
 public class CentimetroParaMetro extends AbstractCalculadora {
     @Override
     public void inicializar() {
-        nomeDaCalculadora = "Centimetro para metros";
+        nome = "Centimetro para metros";
     }
 
     @Override

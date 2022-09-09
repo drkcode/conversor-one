@@ -5,27 +5,28 @@ import java.util.Locale;
 
 public abstract class AbstractCalculadora {
 
-    protected String nomeDaCalculadora;
+    protected String nome;
 
     public AbstractCalculadora(){
         inicializar();
     }
-    public abstract Object calcular(double input);
+
+    public abstract String calcular(double input);
 
     public abstract void inicializar();
 
-    public String getNomeDaCalculadora() {
-        return nomeDaCalculadora;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeDaCalculadora(String nomeDaCalculadora) {
-        this.nomeDaCalculadora = nomeDaCalculadora;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String formatarMoeda(double valor, String pais) {
+    public String formatar(double resultado, String pais) {
         Locale locale = new Locale("pt", pais);
         NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
-        return currencyFormatter.format(valor);
+        return currencyFormatter.format(resultado);
     }
 
     public String formatar(String resultado, String nomeDaUnidade){

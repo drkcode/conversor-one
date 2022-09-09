@@ -13,7 +13,7 @@ public class WonSulCoreanoParaReal extends AbstractCalculadora {
     public void inicializar ()  {
         try {
             cotacaoVO = new Cotacao("BRL", "KRW").get();
-            nomeDaCalculadora = "Won Sul-Coreano/Real Brasileiro";
+            nome = "Won Sul-Coreano/Real Brasileiro";
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Algo deu errado.");
         }

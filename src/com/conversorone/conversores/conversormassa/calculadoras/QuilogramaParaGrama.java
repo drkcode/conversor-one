@@ -6,7 +6,7 @@ public class QuilogramaParaGrama extends AbstractCalculadora {
 
     @Override
     public void inicializar() {
-        nomeDaCalculadora = "Quilograma para Grama";
+        nome = "Quilograma para Grama";
     }
 
     @Override

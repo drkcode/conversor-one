@@ -13,7 +13,7 @@ public class EuroParaReal extends AbstractCalculadora {
     public void inicializar ()  {
         try {
             cotacaoVO = new Cotacao("EUR", "BRL").get();
-            nomeDaCalculadora = cotacaoVO.getName();
+            nome = cotacaoVO.getName();
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Algo deu errado.");
         }

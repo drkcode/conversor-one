@@ -6,7 +6,7 @@ public class MetroParaCentimetro extends AbstractCalculadora {
 
     @Override
     public void inicializar() {
-        nomeDaCalculadora = "Metro para centrimetro";
+        nome = "Metro para centrimetro";
     }
 
     @Override
